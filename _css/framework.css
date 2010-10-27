@@ -1,0 +1,693 @@
+/* -------------------------------------------------------------------------------
+	Generic CSS framework
+	
+	Encoding:	UTF-8
+	Author:		Juan G. Hurtado
+	e-Mail:		juan.g.hurtado@gmail.com
+
+----------------------------------------------------------------------------------
+	Table of contents
+----------------------------------------------------------------------------------
+	1.MISC
+		1.1.Reset styles
+		1.2.Clear floats
+		1.3.Floats
+		1.4.Hidden
+		1.5.Text alignment
+		1.6.Positioning
+	2.GLOBALS
+		2.1.Texts
+		2.2.Lists
+		2.3.Tables
+		2.4.Forms
+		2.5.Messages
+	3.GENERIC WIDTHS
+	4.MARGINS AND PADDINGS
+		4.1.Top
+		4.2.Right
+		4.3.Bottom
+		4.4.Left
+	5.INTERNAL LAYOUTS
+		5.1.Column widths
+		5.2.Spacing after columns
+		5.3.Spacing before columns
+	6.INTERNET-EXPLORER
+		6.1.IE6
+		6.2.IE7
+		6.3.IE8
+		6.4.IE9
+---------------------------------------------------------------------------------- */
+
+/* =MISC
+---------------------------------------------------------------------------------- */
+
+/* =|Reset styles
+---------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd,
+q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol,
+ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+	
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* =|Clear floats
+--------------------------------------------------- */
+.clearfix:before, .grupo:before, .group:before, .clear-block:before,
+.clearfix:after, .grupo:after, .group:after, .clear-block:after {
+	content: "\0020";
+	display: block; 
+	height: 0; 
+	visibility: hidden;
+}
+
+.clearfix:after, .grupo:after, .group:after, .clear-block:after {
+	clear: both;
+}
+
+.clear, .limpiar {
+	clear: both !important;
+}
+
+.clear-left, .limpiar-izquierda, .limpiar-izq {
+	clear: left !important;
+}
+
+.clear-right, .limpiar-derecha, .limpiar-der {
+	clear: right !important;
+}
+
+/* =|Floats
+--------------- */
+.left, .izquierda, .izq {
+	float: left !important;
+}
+
+.right, .derecha, .der {
+	float: right !important;
+}
+
+/* =|Hidden
+------------------- */
+.separador, .enlace-interno, .esconder, .separator, .internal, .hide {
+	display: block;
+	height: 1px;
+	left: -999em;
+	outline: 0;
+	position: absolute;
+	text-indent: -999em;
+	top: -999em;
+	visibility: hidden;
+	width: 1px;
+}
+
+/* =|Text alignment
+---------------------------- */
+.text-align-right, .align-right, .alinear-derecha, .alinear-der {
+	text-align: right !important;
+}
+
+.text-align-left, .align-left, .alinear-izquierda, .alinear-izq {
+	text-align: left !important;
+}
+
+.text-align-center, .align-center, .alinear-centro, .alinear-cen {
+	text-align: center !important;
+}
+
+/* =|Positioning
+----------------------- */
+.relative, .relativo, .position-parent, .position-relative, .posicion-padre, .position-wrapper {
+	position: relative !important;
+}
+
+.absolute, .absoluto, .position-child, .position-absolute, .posicion-hijo, .position-content {
+	position: absolute !important;
+}
+
+.static, .estatico, .position-fixed, .posicion-fija, .posicion-normal {
+	position: static !important;
+}
+
+/* =GLOBALS
+---------------------------------------------------------------------------------- */
+body {
+	color: #333;
+	font: 75%/1.5em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
+	margin: 1.5em 2em;
+}
+
+html>body {
+	font-size: 12px;
+}
+
+/* =|Texts
+------------- */
+h1, h2, h3, h4, h5, h6, ul, ol, dl, p, table, fieldset, form, div.msg, div.messages {
+	font-size: 1em;
+	margin: 1.5em 0;
+}
+
+h1 {
+	font-size: 2.3em;
+	line-height: .6428em;
+	margin-bottom: .6428em;
+	margin-top: 0;
+}
+
+h2 {
+	font-size: 2em;
+	line-height: .75em;
+	margin-bottom: .75em;
+	margin-top: .75em;
+	
+}
+
+h3 {
+	font-size: 1.8333em;
+	line-height: .8181em;
+	margin-bottom: .8181em;
+	margin-top: .8181em;
+	
+}
+
+h4 {
+	font-size: 1.6666em;
+	font-style: italic;
+	line-height: .9em;
+	margin-bottom: .9em;
+	margin-top: .9em;
+}
+
+h5 {
+	font-size: 1.5em;
+	font-variant: small-caps;
+	line-height: 1em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+h6 {
+	font-size: 1.3333em;
+	font-style: italic;
+	font-variant: small-caps;
+	line-height: 1.125em;
+	margin-bottom: 1.125em;
+	margin-top: 1.125em;
+}
+
+/* =|Lists
+------------- */
+li {
+	list-style-position: inside;
+}
+
+ul, ol {
+	margin-left: 1em;
+}
+	
+	ul li {
+		list-style-type: disc;
+	}
+
+	ol li {
+		list-style-type: decimal;
+	}
+
+dl {
+	border-bottom: 1px solid #ddd;
+	margin: 0;
+	width: 100%;
+}
+	
+	dl dt {
+		border-top: 1px solid #ddd;
+		clear: left;
+		float: left;
+		font-weight: bold;
+		line-height: 1.4167em;
+		margin: 0;
+		padding: .7235em 0.5%;
+		width: 20%;
+	}
+	
+	dl dd {
+		border-top: 1px solid #ddd;
+		float: left;
+		line-height: 1.4167em;
+		margin: 0;
+		padding: .7235em 0.5%;
+		width: 78%;
+	}
+	
+/* =|Tables
+------------- */
+table {
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	margin: 0;
+	width: 100%;
+}
+
+	table th, table td {
+		border-bottom: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+		line-height: 1.4467em;
+		padding: .36175em 0.25em;
+	}
+	
+	table th {
+		background: #aaa;
+		border-left: 1px solid #aaa;
+		color: #fff;
+		text-align: left;
+	}
+	
+	table td {}
+	
+/* =|Forms
+------------------ */
+form {
+	width: 100%;
+}
+
+	form p {
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
+
+/* Group fields */
+fieldset {
+	border: 1px solid #ddd;
+	margin: 1.4167em 0;
+	padding: 0 0.5em;
+}
+
+	fieldset legend {
+		font-size: 1em;
+		font-weight: bold;
+		padding: 0 0.25em;
+	}
+
+/* Labels */
+label {}
+
+/* Fields */
+button, input, select, textarea {
+	margin: 0;
+}
+
+label, input[type=button], input[type=submit], button,
+input.button,
+input.form-submit,
+input.teaser-button {
+	cursor: pointer;
+}
+
+input.button, input.boton, input.text, input.cajaTexto, textarea, select,
+input.form-submit, input.form-text, input.teaser-button {
+	border: 1px solid #a9a9a9;
+	color: #333;
+	font-size: 1em;
+	font-family: inherit;
+	padding: .354175em 0.15em;
+	width: 50%;
+}
+
+input:focus, textarea:focus, select:focus {
+	color: #111;
+}
+
+input:invalid, textarea:invalid, select:invalid,
+input.error, textarea.error, select.error {
+	background-color: #FBE3E4;
+	border-color: #FBC2C4;
+	color: #8a1f11;
+}
+
+/* Text fields */
+input.text {}
+
+/* Textareas */
+textarea {
+	height: 7.1em;
+	overflow: auto;
+	width: 90%;
+}
+
+/* Selects */
+select {
+	width: auto;
+}
+
+/* Radio buttons */
+.radio {
+	margin-bottom: 1.45em;
+	margin-top: 1.45em;
+}
+
+	.radio input {
+		border: none;
+		height: auto;
+		margin: 0;
+		width: auto;
+	}
+
+/* Checkboxes */
+.checkbox {
+	margin-bottom: 1.45em;
+	margin-top: 1.45em;
+}
+
+	.checkbox input {
+		border: none;
+		height: auto;
+		margin: 0;
+		width: auto;
+	}
+
+/* Submit buttons */
+.botonera {
+	margin-bottom: 1.35em;
+	margin-top: 1.35em;
+}
+
+input.button,
+input.form-submit,
+input.teaser-button {
+	background: #E5E5E5;
+	color: #333;
+	cursor: pointer;
+	font-size: 1.15em;
+	height: auto;
+	padding: 0.1em 0.25em;
+	width: auto;
+}
+
+input.button:hover, input.button:focus, 
+input.form-submit:hover, input.form-submit:focus,
+input.teaser-button:hover, input.teaser-button:focus {
+	background: #D6D6D6;
+	color: #000;
+}
+
+/* =|Messages
+--------------- */
+/* Required mark */
+.required {
+	color: #8a1f11;
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Inline error message */
+span.error {
+	color: #8a1f11;
+	margin: 0 1em;
+}
+
+/* Inline hint */
+span.hint {
+	color: #999;
+	display: block;
+	font-style: italic;
+}
+
+/* Global block messages */
+div.msg, div.messages {
+	border: 2px solid #ddd;
+	margin: 1.4em 0;
+	padding: .6333em 0.75em;
+}
+	
+	/* Block error */
+	div.error {
+		background: #FBE3E4;
+		border-color: #FBC2C4;
+		color: #8a1f11;
+	}
+	
+		div.error a {
+			color: #8a1f11;
+		}
+	
+	/* Block success */
+	div.success, div.status {
+		background: #E6EFC2;
+		border-color: #C6D880;
+		color: #264409;
+	}
+	
+		div.success a, div.status a {
+			color: #264409;
+		}
+	
+	/* Block warning */
+	div.warning {
+		background: #FFF6BF;
+		border-color: #FFD324;
+		color: #514721;
+	}
+	
+		div.warning a {
+			color: #514721;
+		}
+
+/* =GENERIC WIDTHS
+---------------------------------------------------------------------------------- */
+.width-05,  .ancho-05  { width: 5% !important;   }
+.width-10,  .ancho-10  { width: 10% !important;  }
+.width-15,  .ancho-15  { width: 15% !important;  }
+.width-20,  .ancho-20  { width: 20% !important;  }
+.width-25,  .ancho-25  { width: 25% !important;  }
+.width-30,  .ancho-30  { width: 30% !important;  }
+.width-35,  .ancho-35  { width: 35% !important;  }
+.width-40,  .ancho-40  { width: 40% !important;  }
+.width-45,  .ancho-45  { width: 45% !important;  }
+.width-50,  .ancho-50  { width: 50% !important;  }
+.width-55,  .ancho-55  { width: 55% !important;  }
+.width-60,  .ancho-60  { width: 60% !important;  }
+.width-65,  .ancho-65  { width: 65% !important;  }
+.width-70,  .ancho-70  { width: 70% !important;  }
+.width-75,  .ancho-75  { width: 75% !important;  }
+.width-80,  .ancho-80  { width: 80% !important;  }
+.width-85,  .ancho-85  { width: 85% !important;  }
+.width-90,  .ancho-90  { width: 90% !important;  }
+.width-95,  .ancho-95  { width: 95% !important;  }
+.width-100, .ancho-100 { width: 100% !important; }
+
+/* =MARGINS AND PADDINGS
+---------------------------------------------------------------------------------- */
+/* =|Top
+------------- */
+.margin-top-0   { margin-top: 0 !important;     }
+.margin-top-0-5 { margin-top: 0.5em !important; }
+.margin-top-1-0 { margin-top: 1em !important;   }
+.margin-top-1-5 { margin-top: 1.5em !important; }
+.margin-top-2-0 { margin-top: 2em !important;   }
+.margin-top-2-5 { margin-top: 2.5em !important; }
+.margin-top-3-0 { margin-top: 3em !important;   }
+.margin-top-3-5 { margin-top: 3.5em !important; }
+.margin-top-4-0 { margin-top: 4em !important;   }
+
+.padding-top-0   { padding-top: 0 !important;     }
+.padding-top-0-5 { padding-top: 0.5em !important; }
+.padding-top-1-0 { padding-top: 1em !important;   }
+.padding-top-1-5 { padding-top: 1.5em !important; }
+.padding-top-2-0 { padding-top: 2em !important;   }
+.padding-top-2-5 { padding-top: 2.5em !important; }
+.padding-top-3-0 { padding-top: 3em !important;   }
+.padding-top-3-5 { padding-top: 3.5em !important; }
+.padding-top-4-0 { padding-top: 4em !important;   }
+
+/* =|Right
+-------------- */
+.margin-right-0   { margin-right: 0 !important;     }
+.margin-right-0-5 { margin-right: 0.5em !important; }
+.margin-right-1-0 { margin-right: 1em !important;   }
+.margin-right-1-5 { margin-right: 1.5em !important; }
+.margin-right-2-0 { margin-right: 2em !important;   }
+.margin-right-2-5 { margin-right: 2.5em !important; }
+.margin-right-3-0 { margin-right: 3em !important;   }
+.margin-right-3-5 { margin-right: 3.5em !important; }
+.margin-right-4-0 { margin-right: 4em !important;   }
+
+.padding-right-0   { padding-right: 0 !important;     }
+.padding-right-0-5 { padding-right: 0.5em !important; }
+.padding-right-1-0 { padding-right: 1em !important;   }
+.padding-right-1-5 { padding-right: 1.5em !important; }
+.padding-right-2-0 { padding-right: 2em !important;   }
+.padding-right-2-5 { padding-right: 2.5em !important; }
+.padding-right-3-0 { padding-right: 3em !important;   }
+.padding-right-3-5 { padding-right: 3.5em !important; }
+.padding-right-4-0 { padding-right: 4em !important;   }
+
+/* =|Bottom
+------------ */
+.margin-bottom-0   { margin-bottom: 0 !important;     }
+.margin-bottom-0-5 { margin-bottom: 0.5em !important; }
+.margin-bottom-1-0 { margin-bottom: 1em !important;   }
+.margin-bottom-1-5 { margin-bottom: 1.5em !important; }
+.margin-bottom-2-0 { margin-bottom: 2em !important;   }
+.margin-bottom-2-5 { margin-bottom: 2.5em !important; }
+.margin-bottom-3-0 { margin-bottom: 3em !important;   }
+.margin-bottom-3-5 { margin-bottom: 3.5em !important; }
+.margin-bottom-4-0 { margin-bottom: 4em !important;   }
+
+.padding-bottom-0   { padding-bottom: 0 !important;     }
+.padding-bottom-0-5 { padding-bottom: 0.5em !important; }
+.padding-bottom-1-0 { padding-bottom: 1em !important;   }
+.padding-bottom-1-5 { padding-bottom: 1.5em !important; }
+.padding-bottom-2-0 { padding-bottom: 2em !important;   }
+.padding-bottom-2-5 { padding-bottom: 2.5em !important; }
+.padding-bottom-3-0 { padding-bottom: 3em !important;   }
+.padding-bottom-3-5 { padding-bottom: 3.5em !important; }
+.padding-bottom-4-0 { padding-bottom: 4em !important;   }
+
+/* =|Left
+---------------- */
+.margin-left-0   { margin-left: 0 !important;     }
+.margin-left-0-5 { margin-left: 0.5em !important; }
+.margin-left-1-0 { margin-left: 1em !important;   }
+.margin-left-1-5 { margin-left: 1.5em !important; }
+.margin-left-2-0 { margin-left: 2em !important;   }
+.margin-left-2-5 { margin-left: 2.5em !important; }
+.margin-left-3-0 { margin-left: 3em !important;   }
+.margin-left-3-5 { margin-left: 3.5em !important; }
+.margin-left-4-0 { margin-left: 4em !important;   }
+
+.padding-left-0   { padding-left: 0 !important;     }
+.padding-left-0-5 { padding-left: 0.5em !important; }
+.padding-left-1-0 { padding-left: 1em !important;   }
+.padding-left-1-5 { padding-left: 1.5em !important; }
+.padding-left-2-0 { padding-left: 2em !important;   }
+.padding-left-2-5 { padding-left: 2.5em !important; }
+.padding-left-3-0 { padding-left: 3em !important;   }
+.padding-left-3-5 { padding-left: 3.5em !important; }
+.padding-left-4-0 { padding-left: 4em !important;   }
+
+/* =INTERNAL LAYOUTS
+---------------------------------------------------------------------------------- */
+.col-05, .col-10, .col-15, .col-20, .col-25,
+.col-30, .col-35, .col-40, .col-45, .col-50,
+.col-55, .col-60, .col-65, .col-70, .col-75,
+.col-80, .col-85, .col-90, .col-95, .col-100 {
+	float: left;
+}
+
+/* =|Column widths
+------------------------- */
+.col-05  { width: 5%;   }
+.col-10  { width: 10%;  }
+.col-15  { width: 15%;  }
+.col-20  { width: 20%;  }
+.col-25  { width: 25%;  }
+.col-30  { width: 30%;  }
+.col-35  { width: 35%;  }
+.col-40  { width: 40%;  }
+.col-45  { width: 45%;  }
+.col-50  { width: 50%;  }
+.col-55  { width: 55%;  }
+.col-60  { width: 60%;  }
+.col-65  { width: 65%;  }
+.col-70  { width: 70%;  }
+.col-75  { width: 75%;  }
+.col-80  { width: 80%;  }
+.col-85  { width: 85%;  }
+.col-90  { width: 90%;  }
+.col-95  { width: 95%;  }
+.col-100 { width: 100%; }
+
+/* =|Spacing after columns
+------------------------------------ */
+.prepend-05  { margin-left: 5%;   }
+.prepend-10  { margin-left: 10%;  }
+.prepend-15  { margin-left: 15%;  }
+.prepend-20  { margin-left: 20%;  }
+.prepend-25  { margin-left: 25%;  }
+.prepend-30  { margin-left: 30%;  }
+.prepend-35  { margin-left: 35%;  }
+.prepend-40  { margin-left: 40%;  }
+.prepend-45  { margin-left: 45%;  }
+.prepend-50  { margin-left: 50%;  }
+.prepend-55  { margin-left: 55%;  }
+.prepend-60  { margin-left: 60%;  }
+.prepend-65  { margin-left: 65%;  }
+.prepend-70  { margin-left: 70%;  }
+.prepend-75  { margin-left: 75%;  }
+.prepend-80  { margin-left: 80%;  }
+.prepend-85  { margin-left: 85%;  }
+.prepend-90  { margin-left: 90%;  }
+.prepend-95  { margin-left: 95%;  }
+.prepend-100 { margin-left: 100%; }
+
+/* =|Spacing before columns
+-------------------------------------- */
+.append-05  { margin-right: 5%;   }
+.append-10  { margin-right: 10%;  }
+.append-15  { margin-right: 15%;  }
+.append-20  { margin-right: 20%;  }
+.append-25  { margin-right: 25%;  }
+.append-30  { margin-right: 30%;  }
+.append-35  { margin-right: 35%;  }
+.append-40  { margin-right: 40%;  }
+.append-45  { margin-right: 45%;  }
+.append-50  { margin-right: 50%;  }
+.append-55  { margin-right: 55%;  }
+.append-60  { margin-right: 60%;  }
+.append-65  { margin-right: 65%;  }
+.append-70  { margin-right: 70%;  }
+.append-75  { margin-right: 75%;  }
+.append-80  { margin-right: 80%;  }
+.append-85  { margin-right: 85%;  }
+.append-90  { margin-right: 90%;  }
+.append-95  { margin-right: 95%;  }
+.append-100 { margin-right: 100%; }
+
+
+/* =INTERNET-EXPLORER
+---------------------------------------------------------------------------------- */
+.ltie8 .clearfix
+.ltie8 .grupo,
+.ltie8 .group,
+.ltie8 .clear-block {
+	zoom: 1;
+}
+
+.ltie8 legend {
+	margin-left: -7px;
+}
+
+/* =|IE6
+--------------------------------- */
+
+
+/* =|IE7
+--------------------------------- */
+.ie7 img {
+	-ms-interpolation-mode: bicubic;
+}
+
+/* =|IE8
+--------------------------------- */
+
+
+/* =|IE9
+--------------------------------- */
