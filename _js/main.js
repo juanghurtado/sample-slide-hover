@@ -33,7 +33,7 @@ if (typeof jQuery != "undefined") {
 					left : actualleft,
 					width : actualwidth
 				}, 400);
-			},100);
+			},150);
 			
 			$element.data('timer', t);
 		})
